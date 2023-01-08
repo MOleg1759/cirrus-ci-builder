@@ -10,7 +10,7 @@ B='\033[1;34m'
 W='\033[1;37m'
 
 # User infomation
-USER='Tashar'
+USER='L1sa-f'
 HOST='Cirrus'
 TOKEN=${token}
 CHATID=${chat_id}
@@ -24,11 +24,10 @@ SDFCF='1'
 BUILD='clean'
 
 # Device configuration
-NAME='Mi A2 / 6X'
-DEVICE='wayne'
-DEVICE2='jasmine'
+NAME='Redmi Note 7'
+DEVICE='lavender'
 CAM_LIB='1'
-HAPTICS='1'
+HAPTICS='2'
 
 # Paths
 KERNEL_DIR=$(pwd)
@@ -39,11 +38,7 @@ cd $KERNEL_DIR
 
 # Defconfig selection
 if [[ "$CAM_LIB" == "1" ]]; then
-	DFCF="vendor/${DEVICE}-perf_defconfig"
-elif [[ "$CAM_LIB" == "2" ]]; then
-	DFCF="vendor/${DEVICE}-old-perf_defconfig"
-elif [[ "$CAM_LIB" == "3" ]]; then
-	DFCF="vendor/${DEVICE}-oss-perf_defconfig"
+	DFCF="${DEVICE}_defconfig"
 fi
 CONFIG="$KERNEL_DIR/arch/arm64/configs/$DFCF"
 
@@ -199,7 +194,6 @@ zip_ak() {
 	source work/.config
 
 	FDEVICE=${DEVICE^^}
-	FDEVICE2=${DEVICE2^^}
 	KNAME=$(echo "$CONFIG_LOCALVERSION" | cut -c 2-)
 
 	if [ "$CONFIG_LTO_CLANG_THIN" != "y" ] && [ "$CONFIG_LTO_CLANG_FULL" == "y" ]; then
@@ -238,7 +232,7 @@ zip_ak() {
 
 	cd $ZIP_DIR
 
-	FINAL_ZIP="$KNAME-$CAM-$HAPTIC-$FDEVICE2-$FDEVICE-$(date +"%H%M")"
+	FINAL_ZIP="$KNAME-$CAM-$HAPTIC-$FDEVICE-$(date +"%H%M")"
 	zip -r9 "$FINAL_ZIP".zip * -x README.md LICENSE FUNDING.yml *placeholder zipsigner*
 	java -jar zipsigner* "$FINAL_ZIP.zip" "$FINAL_ZIP-signed.zip"
 	FINAL_ZIP="$FINAL_ZIP-signed.zip"
@@ -255,7 +249,7 @@ zip_ak() {
 
 # Print the build information
 	tg_post_msg "
-	=========Scarlet-X Kernel=========
+	=========Lain Kernel=========
 	Compiler: <code>$CONFIG_CC_VERSION_TEXT</code>
 	Linux Version: <code>$KV</code>
 	Maintainer: <code>$USER</code>
