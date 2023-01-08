@@ -1,9 +1,9 @@
 env:
-    token: "ENCRYPTED[!36c7a19303307957678730d64338086346831226a1abf804f755aa7ad8330398a49fa1964559a23e17ca138f10335860!]"
+    token: "ENCRYPTED[!558cdd985152289b3f219775f161adfa38bacad60eec4e64bef51863646216f931b37e4709a3176d5b3f3d68954c415d!]"
     chat_id: "ENCRYPTED[!6e7eccee25b11a8b31961f3c9af43cd95a2b7523af91e53992cddd33dc6175374d1e863aa9a44e0fe364bdcb9abc03e1!]"
 
 task:
-  name: "Scarlet-X-Kernel-Builder"
+  name: "Lain-Kernel-Builder"
   timeout_in: 2h
   container:
       image: ghcr.io/neutron-toolchains/docker-image:arch-neutron

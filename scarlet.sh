@@ -22,6 +22,7 @@ COMPILER="$1"
 SILENCE='0'
 SDFCF='1'
 BUILD='clean'
+CONFIG_CC_VERSION_TEXT='Neutron clang 16.0.0'
 
 # Device configuration
 NAME='Redmi Note 7'
@@ -232,13 +233,13 @@ zip_ak() {
 
 	cd $ZIP_DIR
 
-	FINAL_ZIP="$KNAME-$CAM-$HAPTIC-$FDEVICE-$(date +"%H%M")"
+	FINAL_ZIP="$KNAME-$FDEVICE-$(date +"%H%M")"
 	zip -r9 "$FINAL_ZIP".zip * -x README.md LICENSE FUNDING.yml *placeholder zipsigner*
 	java -jar zipsigner* "$FINAL_ZIP.zip" "$FINAL_ZIP-signed.zip"
 	FINAL_ZIP="$FINAL_ZIP-signed.zip"
 
 # Post the kernel zip
-	tg_post_build "$FINAL_ZIP" "${CAM}+${HAPTIC}"
+	tg_post_build "$FINAL_ZIP"
 
 	cd $KERNEL_DIR
 
