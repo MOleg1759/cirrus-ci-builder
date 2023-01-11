@@ -7,8 +7,8 @@ task:
   timeout_in: 2h
   container:
       image: ghcr.io/neutron-toolchains/docker-image:arch-neutron
-      cpu: 8
-      memory: 32G
+      cpu: 4
+      memory: 8G
 
   Build_script:
       - ln -fs /usr/share/zoneinfo/Asia/Dhaka /etc/localtime && date
