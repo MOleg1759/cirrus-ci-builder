@@ -21,7 +21,7 @@ cd ../..
 gsc https://github.com/L1sa-f/AnyKernel3-1.git AnyKernel3
 
 # Clone Kernel Source
-gsc https://github.com/L1sa-f/kernel_4.19_new.git -b main Kernel
+gsc https://github.com/MOleg1759/kernel_4.19_new.git -b main Kernel
 
 # Setup Scripts
 mv scarlet.sh Kernel/scarlet.sh
