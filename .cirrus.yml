@@ -1,6 +1,6 @@
 env:
-    token: "ENCRYPTED[!558cdd985152289b3f219775f161adfa38bacad60eec4e64bef51863646216f931b37e4709a3176d5b3f3d68954c415d!]"
-    chat_id: "ENCRYPTED[!6e7eccee25b11a8b31961f3c9af43cd95a2b7523af91e53992cddd33dc6175374d1e863aa9a44e0fe364bdcb9abc03e1!]"
+    token: "ENCRYPTED[!dc3e2d81b67161c6b19a4c82fcedd497dbdb45f53da9400aefb556ebfa5b318add4256f4ad2b7f1578bc79d0275bbd42!]"
+    chat_id: "ENCRYPTED[!46506d3adac79193e071704503f0c1eb01dba94664dbbc080d5a7846e184ac41312afb9c2366727662713d953eca3e4c!]"
 
 task:
   name: "Lain-Kernel-Builder"
