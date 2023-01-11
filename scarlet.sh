@@ -10,7 +10,7 @@ B='\033[1;34m'
 W='\033[1;37m'
 
 # User infomation
-USER='L1sa-f'
+USER='Vasyan_171'
 HOST='Cirrus'
 TOKEN=${token}
 CHATID=${chat_id}
