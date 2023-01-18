@@ -18,7 +18,7 @@ bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/
 cd ../..
 
 # Clone AnyKernel3
-gsc https://github.com/L1sa-f/AnyKernel3-1.git AnyKernel3
+gsc https://github.com/MOleg1759/AnyKernel3-4.19.git AnyKernel3
 
 # Clone Kernel Source
 gsc https://github.com/MOleg1759/kernel_4.19_new.git -b main Kernel
