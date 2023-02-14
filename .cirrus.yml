@@ -1,6 +1,3 @@
-env:
-    token: "ENCRYPTED[!dc3e2d81b67161c6b19a4c82fcedd497dbdb45f53da9400aefb556ebfa5b318add4256f4ad2b7f1578bc79d0275bbd42!]"
-    chat_id: "ENCRYPTED[!46506d3adac79193e071704503f0c1eb01dba94664dbbc080d5a7846e184ac41312afb9c2366727662713d953eca3e4c!]"
 
 task:
   name: "Lain-Kernel-Builder"
@@ -13,4 +10,4 @@ task:
   Build_script:
       - ln -fs /usr/share/zoneinfo/Asia/Dhaka /etc/localtime && date
       - locale-gen en_US en_US.UTF-8
-      - bash builder.sh
+      - bash builder.sh --old
