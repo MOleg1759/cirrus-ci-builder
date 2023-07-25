@@ -1,9 +1,14 @@
 #!/bin/bash
-HOME="$(pwd)"
 
 # TG variables
 chat_id=-1001817086054
 bot_token=5498602147:AAGV8n_lBIa-KmPfG884c-MC7xDlBXgRFhU
+
+NAME=NekoKernel
+version=Snapshot
+START=$(date +"%s")
+source=`pwd`
+date="`date +"%m%d-%H%M"`"
 
 # Cloning kernel source
 git clone https://github.com/MOleg1759/android_kernel_xiaomi_sdm660.git
@@ -16,15 +21,9 @@ git clone --depth=1 https://gitlab.com/crdroidandroid/android_prebuilts_clang_ho
 git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
 git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
 
-clang_path="${HOME}/aosp-clang/bin"
-gcc_path="${HOME}/gcc/bin"
-gcc_32_path="${HOME}/gcc32/bin"
-
-NAME=NekoKernel
-version=Snapshot
-START=$(date +"%s")
-source=`pwd`
-date="`date +"%m%d-%H%M"`"
+clang_path="${HOME}/aosp-clang"
+gcc_path="$source/gcc"
+gcc_32_path="$source/gcc32"
 
 print (){
 case ${2} in
