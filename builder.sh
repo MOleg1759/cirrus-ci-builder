@@ -5,6 +5,8 @@ HOME="$(pwd)"
 chat_id=-1001817086054
 bot_token=5498602147:AAGV8n_lBIa-KmPfG884c-MC7xDlBXgRFhU
 
+# Cloning kernel source
+git clone https://github.com/MOleg1759/android_kernel_xiaomi_sdm660.git
 
 # Cloning AnyKernel
 git clone -depth 1 https://github.com/MOleg1759/AnyKernel3-4.19.git -b 4.19 AnyKernel3
