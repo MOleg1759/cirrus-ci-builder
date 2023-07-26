@@ -7,23 +7,23 @@ bot_token=5498602147:AAGV8n_lBIa-KmPfG884c-MC7xDlBXgRFhU
 NAME=NekoKernel
 version=Snapshot
 START=$(date +"%s")
-source=`pwd`
+source=`${pwd}`
 date="`date +"%m%d-%H%M"`"
 
 # Cloning kernel source
 git clone https://github.com/MOleg1759/android_kernel_xiaomi_sdm660.git
 
 # Cloning AnyKernel
-git clone -depth 1 https://github.com/MOleg1759/AnyKernel3-4.19.git -b 4.19 AnyKernel3
+git clone --depth 1 https://github.com/MOleg1759/AnyKernel3-4.19.git -b 4.19 AnyKernel3
 
 # Cloning toolchains
 git clone --depth=1 https://github.com/sohamxda7/llvm-stable.git -b aosp-12.0.6 aosp-clang
 git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
 git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
 
-clang_path="${HOME}/aosp-clang/bin/clang"
-gcc_path="$source/gcc/bin/aarch64-linux-android-"
-gcc_32_path="$source/gcc32/bin/arm-linux-androideabi-"
+clang_path="$source/aosp-clang/bin/clang"
+gcc_path="${source}/gcc/bin/aarch64-linux-android-"
+gcc_32_path="${source}/gcc32/bin/arm-linux-androideabi-"
 
 print (){
 case ${2} in
