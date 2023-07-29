@@ -24,9 +24,9 @@ git clone https://github.com/kdrag0n/proton-clang.git --depth=1 clang
 
 # PATH="$source/aosp-clang/bin:$source/gcc/bin:${PATH}"
 
-clang_path="$source/clang/bin/clang"
-gcc_path="$source/clang//bin/aarch64-linux-gnu-"
-gcc_32_path="$source/clang/bin/arm-linux-gnueabi-"
+clang_path="${source}/clang/bin/clang"
+gcc_path="${source}/clang//bin/aarch64-linux-gnu-"
+gcc_32_path="${source}/clang/bin/arm-linux-gnueabi-"
 
 print (){
 case ${2} in
