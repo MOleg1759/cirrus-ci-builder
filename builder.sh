@@ -21,9 +21,11 @@ git clone --depth=1 https://github.com/sohamxda7/llvm-stable.git -b aosp-12.0.6 
 git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
 git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
 
-clang_path="$source/aosp-clang/bin/clang"
-gcc_path="${source}/gcc/bin/aarch64-linux-android-"
-gcc_32_path="${source}/gcc32/bin/arm-linux-androideabi-"
+PATH="$source/aosp-clang/bin:$source/gcc/bin:${PATH}"
+
+clang_path="clang"
+gcc_path="aarch64-linux-android-"
+gcc_32_path="arm-linux-androideabi-"
 
 print (){
 case ${2} in
@@ -60,8 +62,8 @@ clean(){
 	rm -rf out
 }
 
-export KBUILD_BUILD_USER="Incubator"
-export KBUILD_BUILD_HOST="Ratoriku"
+#export KBUILD_BUILD_USER="Incubator"
+#export KBUILD_BUILD_HOST="Ratoriku"
 
 build_oldcam(){
 	print "Building OLDCAM version..." blue
