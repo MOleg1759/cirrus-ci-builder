@@ -17,15 +17,16 @@ git clone https://github.com/MOleg1759/android_kernel_xiaomi_sdm660.git
 git clone --depth 1 https://github.com/MOleg1759/AnyKernel3-4.19.git -b 4.19 AnyKernel3
 
 # Cloning toolchains
-git clone --depth=1 https://github.com/sohamxda7/llvm-stable.git -b aosp-12.0.6 aosp-clang
-git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
-git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
+# git clone --depth=1 https://github.com/sohamxda7/llvm-stable.git -b aosp-12.0.6 aosp-clang
+# git clone https://github.com/sohamxda7/llvm-stable -b gcc64 --depth=1 gcc
+# git clone https://github.com/sohamxda7/llvm-stable -b gcc32  --depth=1 gcc32
+git clone https://github.com/kdrag0n/proton-clang.git --depth=1 clang
 
-PATH="$source/aosp-clang/bin:$source/gcc/bin:${PATH}"
+# PATH="$source/aosp-clang/bin:$source/gcc/bin:${PATH}"
 
-clang_path="clang"
-gcc_path="aarch64-linux-android-"
-gcc_32_path="arm-linux-androideabi-"
+clang_path="$source/clang/bin/clang"
+gcc_path="$source/clang//bin/aarch64-linux-gnu-"
+gcc_32_path="$source/clang/bin/arm-linux-gnueabi-"
 
 print (){
 case ${2} in
